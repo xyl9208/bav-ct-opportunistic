@@ -1,0 +1,25 @@
+# Pre-processing configuration (Methods: CT series selection and preprocessing)
+series_selection:
+  require_chest_coverage: true
+  single_series_per_exam: true
+  prefer: non_contrast            # non-gated, non-contrast chest CT
+
+segmentation:
+  backend: TotalSegmentator
+  version: "2.3.0"
+  task: total
+  roi_subset: [aorta, heart]
+  fast: false
+
+roi:
+  valve_centred: true
+  cube_mm: 100.0
+  spacing_mm: [0.78, 0.78, 0.78]
+  output_shape: [128, 128, 128]
+  hu_clip: [-150, 800]
+
+thickness_randomisation:
+  enabled: true
+  gaussian_sigma_mm: [0.0, 1.2]
+  downsample_factor: [1, 2]
+  probability: 0.5

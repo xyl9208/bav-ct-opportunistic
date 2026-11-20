@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "bav-ct-opportunistic: opportunistic detection of bicuspid aortic valve on non-gated, non-contrast chest CT"
+type: software
+authors:
+  - family-names: "Xiang"
+    given-names: "Yilang"
+repository-code: "https://github.com/xyl9208/bav-ct-opportunistic"
+license: MIT
+version: "1.0.0"
+date-released: "2026-09-15"

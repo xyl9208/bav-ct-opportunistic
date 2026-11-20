@@ -1,0 +1,10 @@
+# Threshold calibration (Methods: diagnostic comparison and application thresholds)
+rule: percentile
+percentiles: [95, 90]
+method: higher                  # numpy.percentile(..., method="higher")
+calibration_sets:
+  central: null                 # internal TAV calibration set
+  anji: external/anji/calib
+  quzhou: external/quzhou/calib
+outputs:
+  dl_model: params/thresholds.json

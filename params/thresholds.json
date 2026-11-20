@@ -1,0 +1,51 @@
+{
+  "note": "Fixed application thresholds (Supplementary Table 5), rounded to 4 decimals. p95/p90 are the 95th/90th percentiles of the score distribution in the corresponding TAV (non-BAV) calibration set, computed with numpy.percentile (default linear interpolation).",
+  "dl_model": {
+    "central": {
+      "p95": 0.3915,
+      "p90": 0.1904
+    },
+    "anji": {
+      "n": 998,
+      "p95": 0.6962,
+      "p90": 0.357
+    },
+    "quzhou": {
+      "n": 964,
+      "p95": 0.6376,
+      "p90": 0.3748
+    }
+  },
+  "clinical_and_joint": {
+    "internal": {
+      "clinical": {
+        "p95": 0.308,
+        "p90": 0.1865
+      },
+      "joint": {
+        "p95": 0.2385,
+        "p90": 0.1316
+      }
+    },
+    "anji": {
+      "clinical": {
+        "p95": 0.3792,
+        "p90": 0.2162
+      },
+      "joint": {
+        "p95": 0.3528,
+        "p90": 0.2069
+      }
+    },
+    "quzhou": {
+      "clinical": {
+        "p95": 0.4437,
+        "p90": 0.2248
+      },
+      "joint": {
+        "p95": 0.2514,
+        "p90": 0.1539
+      }
+    }
+  }
+}

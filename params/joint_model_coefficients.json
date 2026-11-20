@@ -1,0 +1,50 @@
+{
+  "note": "Logistic regression coefficients (log-odds), rounded to 4 decimals as reported in Supplementary Table 4. Full-precision parameters and covariance matrices are available from the corresponding authors on reasonable request.",
+  "outcome": "BAV vs TAV",
+  "spline": {
+    "variable": "ascending aortic diameter (mm), clipped to [10, 100]",
+    "basis": "cubic B-spline, df=4, degree=3, intercept excluded",
+    "knots": [
+      10,
+      10,
+      10,
+      10,
+      37.2,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "features": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "ln(1+root_calcium_mm3)",
+    "age",
+    "male",
+    "logit_dl"
+  ],
+  "clinical_model": {
+    "intercept": -7.4648,
+    "B1": 4.5455,
+    "B2": 11.3017,
+    "B3": 26.2493,
+    "B4": -3.8418,
+    "logcalc": 0.5468,
+    "age": -0.0988,
+    "male": 0.2998
+  },
+  "joint_model": {
+    "intercept": -17.493,
+    "B1": 18.6685,
+    "B2": 17.6959,
+    "B3": 30.2262,
+    "B4": -1.5174,
+    "logcalc": 0.1542,
+    "age": -0.0607,
+    "male": 0.0656,
+    "logit_dl": 0.4186
+  }
+}

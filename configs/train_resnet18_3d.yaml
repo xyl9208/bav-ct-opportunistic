@@ -1,0 +1,29 @@
+# Training configuration for the deployed model (native 3D ResNet-18, five-fold ensemble)
+model:
+  name: resnet18_3d_native
+  in_channels: 1
+  input_shape: [128, 128, 128]
+  dropout: 0.2
+
+training:
+  folds: 5
+  split: patient_level
+  epochs: 60
+  batch_size: 8
+  optimizer: AdamW
+  lr: 0.0003
+  weight_decay: 0.01
+  loss: BCEWithLogitsLoss
+  amp: bf16
+  seed: 20260821
+
+augmentation:
+  affine_3d:
+    rotation_deg: 10
+    scale: [0.9, 1.1]
+    translation_voxels: 5
+  flip: false
+
+inference:
+  ensemble: mean_sigmoid
+  tta: false
